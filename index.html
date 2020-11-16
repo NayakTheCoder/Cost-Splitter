@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Splitter</title>
+    <style>
+        *{
+            text-align: center;
+            font-family: cursive;
+            font-size: 20px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        #div1{
+            padding-left: 430px;
+            padding-top: 100px;
+           
+        }
+        #div2{
+            width: 350px;
+            height: 500px;
+            border: 2px solid black;
+            border-radius: 200px solid black;
+        }
+        #display{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <h2>Split it!</h2>
+            <br>
+            Total cost:
+            <br>
+            <input type="number" placeholder="Enter the amount" id="amount">$
+            <br>
+            <br>
+            Number of people: 
+            <br>
+<input type="number" autocorrect = "on" placeholder="Enter the number of peple" id="pepole">
+       <br>
+       <br>
+       <button type="button" onclick="myfunction()">Calculate</button>
+       <br>
+       <br>
+       <p id="display"></p>
+        </div>
+    </div>
+</body>
+<script>
+// the javascript code goes here , declaring the variables and getting element from HTML.
+    let amount = document.getElementById("amount");
+    let p = document.getElementById("pepole");
+   let para = document.getElementById("display");
+
+ // declaring the function and performing the math to calculate the cost
+     function myfunction(){
+         let x = amount.value/p.value;
+         // input is disolaye in para
+         para.innerHTML = "Amount per person: "+x+" $";
+
+     }
+
+
+
+</script>
+</html>
